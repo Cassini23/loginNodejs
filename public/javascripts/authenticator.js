@@ -31,6 +31,15 @@ AuthenticateService.prototype.delete = function(id){
 };
 */
 
+/****SESSION ID /UUID*****/
+
+function getUUID(){
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
+
 
 /**** Some callback function*****/
 function done(){
@@ -118,7 +127,8 @@ document.addEventListener('DOMContentLoaded',function(){
         var email = logInForm.loginEmail.value;
         var pwd = logInForm.loginPassword.value;
         var service = new AuthenticateService();
-        //var logInObj = {email: email, password: pwd};
-        service.get(email, pwd);
+        var logInObj = {email: email, password: pwd};
+        //service.get(email, pwd);
+        service.create(logInObj);
     });
 });

@@ -4,6 +4,7 @@
 var mongoose = require('mongoose');
 
 var SessionModel = mongoose.model('session',{
+
     timeStamp :{
         type: String,
         required: true,
