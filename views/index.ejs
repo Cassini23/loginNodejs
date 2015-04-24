@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <script src="/javascripts/authenticator.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+
+    <form name ='signUp' action="/">
+        <fieldset>
+            <legend>Sign Up</legend>
+            <label>Email:</label><input type ='text' name="email"/><br/><br/>
+            <label>Password:</label><input type="password" name="password"/><br/><br/>
+            <label>Re-enter Password:</label><input type="password" name="checkPassword"/><br/><br/>
+            <button name="SignUp">Submit</button>
+        </fieldset>
+    </form>
+
+    <form name ='login' action="/">
+        <fieldset>
+            <legend>Log In</legend>
+            <label>Email:</label><input type ='text' name="loginEmail"/><br/><br/>
+            <label>Password:</label><input type="password" name="loginPassword"/><br/><br/>
+            <button name="LogIn">Log In</button>
+        </fieldset>
+    </form>
+
+
+
+  </body>
+</html>
